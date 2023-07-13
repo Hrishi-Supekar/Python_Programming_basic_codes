@@ -1,0 +1,31 @@
+1. Find all of the words in a string that are less than 4 letters using List comprehension.
+sample list -
+
+2.Count the number of spaces in a string using list comprehension.
+str="Python is high level programming language"
+
+3.Find all of the numbers from 1-1000 that have a 3 in them using list comprehension.
+
+sample list - fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']
+
+
+4.make a variable named fruits_with_only_two_vowels. The result should be ['mango', 'kiwi', 'strawberry']
+
+5.make a list that contains each fruit with exactly 5 characters.
+
+6.Make a list that contains fruits that have less than 5 characters
+
+
+7.Make a list containing the number of characters in each fruit. Output would be [5, 4, 10, etc... ]
+
+8.create 10 students dictionary and print highest marks student dictionary
+
+9. Create nested list containing values as the count of list items.
+
+for Ex. - Input: [1, 2, 3]
+Output: [[1], [2, 2], [3, 3, 3]]
+
+Input: [4, 5]
+Output: [[1, 1, 1, 1], [2, 2, 2, 2, 2]]
+
+10.Remove Negative Elements in List.

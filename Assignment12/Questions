@@ -1,0 +1,4 @@
+# 1)write a function that accepts string and counts the number of upper and lower case letter
+# 2)write a function that takes a list and returns a new list with distinct elements from the first list.
+# 3)write a function that takes a number as a parameter and checks whether the number is prime or not
+# 4) Write a Function to create a list where the values are the squares of numbers between 1 and 30(both included)

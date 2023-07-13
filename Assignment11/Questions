@@ -1,0 +1,12 @@
+1.Write a list comprehension that builds a list containing only the names with at least 8 char.
+2.Add % in front and end of every single word in a given string for ex.
+"Harry is good boy" == "%Harry% %is% %good% %boy%" like this in LC(List comprehension)
+3.Remove all odd numbers from the list using list comprehension.
+4.Find all the numbers from 1-100 that are divided by 7 using LC.
+5.Count teh number of spaces in a string.
+6.Find all the numbers from 1 to 100 that have 3 in them.
+7. create lower and upper dictionary for ex. l=["ReD","GreEen","BLue"]
+upper_lower_dict={'red':'RED','blue':'BLUE'....} using dc
+8. lets assume - I have on dict - original_dict={'jack':38,'James':33,'martin':46,'joe':27}
+print only even values information in given dict means output will be - {'jack':38,'martin':46}
+

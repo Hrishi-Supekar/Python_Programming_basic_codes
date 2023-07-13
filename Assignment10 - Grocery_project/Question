@@ -1,0 +1,26 @@
+# Grocery Billing Application
+# Grocery - Dictionary(10 products)
+# product_id
+# product_name
+# stock
+# individual_price
+
+# Menu -
+# Display first menu of admin or customer:
+# Display menu first
+#     1.Add new product
+#     2.Show all products
+#     3.Update specific product
+#     4.Delete specific product
+#     5.Purchase product -
+#         which product you want to purchase?
+#             Q)specify product id(if not present error msg display)
+#                 display product details
+#             Q) Specify product quantity
+#                 display price of product w.r.t quantity
+#             Q) Pay option
+#                 if amount paid correctly display successful msg
+#                 if amount paid incorrectly display error msg with greater or less amount
+#             Q) Ask if you want to continue - Y & N
+#                 if yes then show display menu with updated stock.
+
