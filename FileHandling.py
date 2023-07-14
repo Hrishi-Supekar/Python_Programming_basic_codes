@@ -1,18 +1,17 @@
-# fp = open("newFile.txt", "w")  # will open the file in write mode if exist it will overwrite the content and if not will create new file.
-# fp.write("Hello this is hrishikesh")
-# fp.writelines("This is new content\n"
-#               "hello world\n"
-#               "this is python programming")  # will write multiple lines in the file
-# fp.write("\nThis is new content again")  # will write single line in file.
-# fp = open("newFile.txt", "r")  # will open file in read mode
+fp = open("newFile.txt", "w")  # will open the file in write mode if exist it will overwrite the content and if not will create new file.
+fp.write("Hello this is hrishikesh")
+fp.writelines("\nThis is new content\n"
+              "hello world\n"
+              "this is python programming")  # will write multiple lines in the file
+fp.write("\nThis is new content again")  # will write single line in file.
+fp = open("newFile.txt", "r")  # will open file in read mode
 # print(fp.read()) # read only single line
 # print(fp.read(7)) # will read only 7 words from the line.
 # print(fp.readlines()) # read all lines and create a list of it.
 # for x in fp:
 #     print(x)
-# for i in fp.readlines():
-#     print(i.split())
-
+for i in fp.readlines():
+    print(i.split())
 # [print(i.split()) for i in fp.readlines()] # creating list of single words from line.
 
 
@@ -61,18 +60,18 @@
 # except Exception as e:
 #     print("There is a error!!!",e)
 
-import pickle
-my_dict={"Name":"Hrishi","Age":27,"City":"Pune"}
-try:
-    my_dict_obj=open("dict_pickle.pkl","wb")
-    pickle.dump(my_dict,my_dict_obj)
-    my_dict_obj.close()
-
-    my_dict_obj1=open("dict_pickle.pkl","rb")
-    my_dict=pickle.load(my_dict_obj1)
-    my_dict.update({input("Enter the key:"):input("Enter the value:")})
-    print(my_dict_obj1)
-    pickle.dump(my_dict,my_dict_obj)
-except Exception:
-    print("Error occured")
+# import pickle
+# my_dict={"Name":"Hrishi","Age":27,"City":"Pune"}
+# try:
+#     my_dict_obj=open("dict_pickle.pkl","wb")
+#     pickle.dump(my_dict,my_dict_obj)
+#     my_dict_obj.close()
+#
+#     my_dict_obj1=open("dict_pickle.pkl","rb")
+#     my_dict=pickle.load(my_dict_obj1)
+#     my_dict.update({input("Enter the key:"):input("Enter the value:")})
+#     print(my_dict_obj1)
+#     pickle.dump(my_dict,my_dict_obj)
+# except Exception:
+#     print("Error occured")
 

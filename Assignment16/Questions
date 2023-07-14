@@ -1,0 +1,43 @@
+1. Write a function in python to read the content from a text file "poem.txt" line by line and display the same on screen. Solution
+
+2. Write a function in python to count the number of lines from a text file "story.txt" which is not starting with an alphabet "T".
+Example: If the file "story.txt" contains the following lines: A boy is playing there.
+There is a playground.
+An aeroplane is in the sky.
+The sky is pink.
+Alphabets and numbers are allowed in the password.
+The function should display the output as 3 Solution
+
+3. Write a function in Python to count and display the total number of words in a text file.
+
+4. Write a function in Python to read lines from a text file "notes.txt".
+Your function should find and display the occurrence of the word "the".
+
+For example: If the content of the file is:
+"India is the fastest-growing economy. India is looking for more investments around the globe.
+The whole world is looking at India as a great market.
+Most of the Indians can foresee the heights that India is capable of reaching."
+The output should be 5.
+
+5. Write a function display_words() in python to read lines from a text file "story.txt",
+and display those words, which are less than 4 characters.
+
+6. Write a function in Python to count the words "this" and "these" present in a text file "article.txt".
+[Note that the words "this" and "these" are complete words]
+
+7. Write a function in Python to count words in a text file those are ending with alphabet "e".
+
+8. Write a function in Python to count uppercase character in a text file.
+
+9. A text file named "matter.txt" contains some text, which needs to be displayed such that every next character is separated by a symbol "#".
+Write a function definition for hash_display() in Python that would display the entire content of the file matter.txt in the desired format.
+
+Example :
+If the file matter.txt has the following content stored in it :
+THE WORLD IS ROUND
+
+The function hash_display() should display the following content :
+T#H#E# #W#O#R#L#D# #I#S# #R#O#U#N#D# Solution
+
+10. Aditi has used a text editing software to type some text. After saving the article as WORDS.TXT,
+she realised that she has wrongly typed alphabet J in place of alphabet I everywhere in the article.
