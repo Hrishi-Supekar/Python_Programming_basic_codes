@@ -83,11 +83,24 @@
 #     main()
 
 # ====================
-product_stock = [{'Product_id': 1, 'Product_name': 'Coke ', 'Price': 40},
-                     {'Product_id': 2, 'Product_name': 'Pepsi', 'Price': 35},
-                     {'Product_id': 3, 'Product_name': '7Up  ', 'Price': 36},
-                     {'Product_id': 4, 'Product_name': 'Maaza', 'Price': 30},
-                     {'Product_id': 5, 'Product_name': 'Coffee', 'Price': 25},
-                     {'Product_id': 6, 'Product_name': 'Milk', 'Price': 20}]
-for i in product_stock:
-    print(i['Product_id'])
+# product_stock = [{'Product_id': 1, 'Product_name': 'Coke ', 'Price': 40},
+#                      {'Product_id': 2, 'Product_name': 'Pepsi', 'Price': 35},
+#                      {'Product_id': 3, 'Product_name': '7Up  ', 'Price': 36},
+#                      {'Product_id': 4, 'Product_name': 'Maaza', 'Price': 30},
+#                      {'Product_id': 5, 'Product_name': 'Coffee', 'Price': 25},
+#                      {'Product_id': 6, 'Product_name': 'Milk', 'Price': 20}]
+# for i in product_stock:
+#     print(i['Product_id'])
+
+# ====================
+Number = 204
+
+
+def AddNumber():
+    global Number
+    Number = Number + 200
+
+
+print("The number is:", Number)
+AddNumber()
+print("The number is:", Number)
