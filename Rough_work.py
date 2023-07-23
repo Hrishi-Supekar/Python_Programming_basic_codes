@@ -93,14 +93,137 @@
 #     print(i['Product_id'])
 
 # ====================
-Number = 204
+# Number = 204
+#
+#
+# def AddNumber():
+#     global Number
+#     Number = Number + 200
+#
+#
+# print("The number is:", Number)
+# AddNumber()
+# print("The number is:", Number)
 
+# ===============================
+# def my_decorator(func):
+#     def wrapper():
+#         print("Something is happening before the function is called.")
+#         func()
+#         print("Something is happening after the function is called.")
+#     return wrapper
+#
+# @my_decorator
+# def say_hello():
+#     print("Hello!")
+#
+# # Calling the decorated function
+# say_hello()
 
-def AddNumber():
-    global Number
-    Number = Number + 200
+# ============================
+# def func1(msg):  # here, we are creating a function and passing the parameter
+#     print(msg)
+#
+#
+# func1("Hii, welcome to function ")  # Here, we are printing the data of function 1
+# func2 = func1  # Here, we are copying the function 1 data to function 2
+# func2("hello ")  # Here, we are printing the data of function 2
+# ========================================
+# def outer_div(func):  # here, we are creating a function and passing the parameter
+#     def inner(x, y):  # here, we are creating a function and passing the parameter
+#         if x < y:
+#             x, y = y, x
+#             return func(x, y)  # here, we are returning the function with the parameters
+#
+#     return inner
+#
+#
+# # Here, the below is the syntax of generator
+# @outer_div
+# def divide(x, y):  # here, we are creating a function and passing the parameter
+#     print(x / y)
+#
+#
+# divide(2, 4)
+# ===================================================
+# # Import module to keep track of time
+# import time
+#
+#
+# # defining function to execute for loop
+# def for_loop(num):
+#     l = []
+#     for i in range(num):
+#         l.append(i + 10)
+#     return l
+#
+#
+# # defining function to execute list comprehension
+# def list_comprehension(num):
+#     return [i + 10 for i in range(num)]
+#
+#
+# # Giving values to the functions
+#
+# # Calculating time taken by for loop
+# start = time.time()
+# for_loop(10000000)
+# end = time.time()
+#
+# print('Time taken by for loop:', (end - start))
+#
+# # Calculating time taken by list comprehension
+# start = time.time()
+# list_comprehension(10000000)
+# end = time.time()
+#
+# print('Time taken by list comprehension:', (end - start))
+# ===============================================================
+# def Sum(n):
+#     dsum = 0
+#     for ele in str(n):
+#         dsum += int(ele)
+#     return dsum
+#
+#
+# List = [47, 69, 73, 97, 105, 845, 307]
+# newList = [Sum(i) for i in List ]
+# print(newList)
+# ===================================================================
+# user_dict5 = dict()
+# for numm in range(3, 20):
+#     user_dict5 [numm] = numm*numm
+# print("user_dict5: ", user_dict5)
+# =========================================
+# import pickle
+#
+# # Input Data
+# my_data = {'BMW', 'Audi', 'Toyota', 'Benz'}
+#
+# # Pickle the input
+# with open("demo.pickle", "wb") as file_handle:
+#     pickle.dump(my_data, file_handle, pickle.HIGHEST_PROTOCOL)
+#
+# # Unpickle the above pickled file
+# with open("demo.pickle", "rb") as file_handle:
+#     res = pickle.load(file_handle)
+#     print(res)  # display the output
+# =======================================================
+# class Student:
+#     # Constructor - non parameterized
+#     def __init__(self):
+#         print("This is non parametrized constructor")
+#
+#     def show(self, name):
+#         print("Hello", name)
+#
+#
+# student = Student()
+# student.show("John")
+# ===========================
+def myfunc():
+  x = 300
+  print(x)
 
-
-print("The number is:", Number)
-AddNumber()
-print("The number is:", Number)
+myfunc()
+print(x)
