@@ -221,9 +221,55 @@
 # student = Student()
 # student.show("John")
 # ===========================
-def myfunc():
-  x = 300
-  print(x)
-
-myfunc()
-print(x)
+# def myfunc():
+#   x = 300
+#   print(x)
+#
+# myfunc()
+# print(x)
+# ================================
+# # Python program to create a class having a method called distance
+#
+# class Distance(object):
+#   def __init__(self, x=0, y=0):
+#     self.x = x
+#     self.y = y
+#
+#   def distance(self):
+#     """Finding the distance of point_ from the origin"""
+#     return (self.x ** 2 + self.y ** 2) ** 0.5
+# =================================
+# str = "Rohan"
+# str2 = "ab"
+# # Calling function
+# str2 = str.join(str2)
+# # Displaying result
+# print(str2)
+# ===========================
+# for k in range(1):
+#     for i in range(1):
+#         for j in range(1,10):
+#             print("inside loop")
+#             break
+#             print('after llop')
+#         print("sec loop")
+#     print("main loop")
+# print("oustide loop")
+# =================================================
+# def my_generator():
+#     yield 1
+#     yield 2
+#     yield 3
+#
+#
+# gen = my_generator()
+# for value in gen:
+#     print(value)
+# =================================================
+list1 = [10, 11, 22, 121, 123, 154, 515]
+dict1 = {}
+for i in list1:
+    if str(i) == str(i[::-1]):
+        dict1.update({i:"palindrome"})
+    else:
+        dict1.update({i:'not-palindrome'})
