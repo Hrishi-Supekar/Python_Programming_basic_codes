@@ -40,21 +40,34 @@ def Display_product_list():  # This function is used for display of products
         print(f"Product_ID:{x}\nProduct_Name:{y['Product_Name']}\nProduct_Stock:{y['Stock']}\nIndividual_Price:{y['Individual_Price']}")
         print("--------------------------------------------------")
 
+
 def display_product_id():
-    for x,y in Grocery_prod_dict.items():
+    for x, y in Grocery_prod_dict.items():
         print(f"Id:{x}::{y['Product_Name']}")
 
+
 def display_prod_qty(p_id):
-    for x,y in Grocery_prod_dict.items():
+    for x, y in Grocery_prod_dict.items():
         if x == p_id:
             print(f"Id:{y['Product_Name']}::{y['Stock']}")
+
+
+def display_price_cart(x):
+    for i, j in x.items():
+        for x, y in Grocery_prod_dict.items():
+            if i == x:
+                price_cart.update(
+                    {i: j * int(y['Individual_Price'])})  # Used for adding key and individual price x qty in
+                # price_dict
+    print(price_cart)
+
 
 def customer(price_cart, cart):
     t = 1  # Initialization for while loop
     while t in range(1, 5):
         print("======Customer Menu======\n"
-              "1.Product list:\n2.Add Product to cart:\n3.Remove product from cart:\n"
-              "4.Bill payment\n5.Exit from App:\n"
+              "1.Product list:\n2.Add Product to cart:\n3:Display cart\n4.Remove product from cart:\n"
+              "5.Bill payment\n6.Exit from App:\n"
               "=========================")
         x = int(input("Enter the choice of operation:"))
         if x == 1:  # Display Product list
@@ -75,18 +88,17 @@ def customer(price_cart, cart):
                 for x, y in Grocery_prod_dict.items():
                     if i == x:
                         price_cart.update(
-                            {i: j * int(y['Individual_Price'])})  # Used for adding key and individual price x qty in price_dict
+                            {i: j * int(y['Individual_Price'])})  # Used for adding key and individual price x qty in
+                        # price_dict
             print(price_cart)
-        elif x == 3:  # Remove specific product from cart
+        elif x == 3:
+            display_price_cart(cart)
+        elif x == 4:  # Remove specific product from cart
             P_id = input("Enter the product id to Remove from the cart:")
             cart.pop(P_id)
             print(cart)
-            for i, j in cart.items():
-                for x, y in Grocery_prod_dict.items():
-                    if i == x:
-                        price_cart = {i: j * int(y['Individual_Price'])}  # Used for adding key and individual price x qty in price_dict1
-            print(price_cart)
-        elif x == 4:  # Billing the cart
+            display_price_cart(cart)
+        elif x == 5:  # Billing the cart
             print(cart)
             if cart == {}:
                 print("The cart is empty!!!")
@@ -108,7 +120,7 @@ def customer(price_cart, cart):
                     print("The correct amount received!!!\nThankyou for shopping!!!")
                 else:
                     print("Incorrect amount!!\nPlease try again!!")
-        elif x == 5:  # Exit from App
+        elif x == 6:  # Exit from App
             print("Do yo want to continue to main menu:")
             h = int(input("Enter the choice:\n1.Yes\n2.No\n"))
             if h == 1:
