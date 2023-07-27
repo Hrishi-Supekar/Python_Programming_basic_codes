@@ -15,4 +15,10 @@ def contact(request):
 
 
 def form(request):
-    return render(request, 'calculator.html')
+    if request.method == "POST":
+        a = int(request.POST.get("n1"))
+        b = int(request.POST.get("n2"))
+        ans = a + b
+        return render(request, 'calculator.html', {'ans': ans})
+    else:
+        return render(request, 'calculator.html')

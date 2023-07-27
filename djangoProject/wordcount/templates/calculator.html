@@ -8,26 +8,28 @@
         {
             border:2px solid;
         }
+
     </style>
 </head>
 <body>
-    <form>
-        <table cellpadding="3" align="center">
-            <caption><h2>Calculation Application</h2></caption>
-            <tr>
-                <td>Enter the First Number:</td>
-                <td><input type="number"></td>
-            </tr>
-            <tr>
-                <td>Enter the Second Number:</td>
-                <td><input type="number"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="button" value="Addition"></td>
-
-            </tr>
-        </table>
-    </form>
+<form action="{% url 'cal'%}" method="POST">
+    {% csrf_token %}
+    <table cellpadding="3" align="center">
+        <caption><h2>Calculation Application</h2></caption>
+        <tr>
+            <td>Enter the First Number:</td>
+            <td><input type="number" name="n1"></td>
+        </tr>
+        <tr>
+            <td>Enter the Second Number:</td>
+            <td><input type="number" name="n2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Addition"></td>
+        </tr>
+    </table>
+    <div style="margin-left:580px"><p>Answer:{{ans}}</p></div>
+</form>
 </body>
 </html>
