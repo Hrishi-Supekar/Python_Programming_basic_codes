@@ -12,6 +12,10 @@
     </style>
 </head>
 <body>
+<a href="{%url 'home'%}">Go to Home Page</a><br>
+<a href="{%url 'about'%}">Go to About Page</a><br>
+<a href="{%url 'contact'%}">Go to Contact Page</a><br>
+<a href="{%url 'word'%}">Go to WordCount Project Page</a><br>
 <form action="{% url 'cal'%}" method="POST">
     {% csrf_token %}
     <table cellpadding="3" align="center">
@@ -25,10 +29,19 @@
             <td><input type="number" name="n2"></td>
         </tr>
         <tr>
-            <td></td>
-            <td><input type="submit" value="Addition"></td>
+            <td>Operation to perform:</td>
+            <td>
+                <select name="opr">
+                    <option value="Addition">Addition</option>
+                    <option value="Subtraction">Subtraction</option>
+                    <option value="Multiplication">Multiplication</option>
+                    <option value="Division">Division</option>
+                </select>
+            </td>
+            <td><input type="submit" value="Calculate"></td>
         </tr>
     </table>
+
     <div style="margin-left:580px"><p>Answer:{{ans}}</p></div>
 </form>
 </body>

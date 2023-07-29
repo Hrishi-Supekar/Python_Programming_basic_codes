@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word count Page</title>
+    <style>
+        *
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        h3
+        {
+            text-align:center;
+            color:blue;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+        form
+        {
+            text-align:center;
+        }
+        .Answer
+        {
+            border: solid black;
+            width:500px;
+            margin-left:500px;
+            text-align:justify
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <h3>Welcome to WordCount Project</h3>
+    <form action="{%url 'word'%}" method="POST">
+        {% csrf_token %}
+        <textarea rows="10" cols="50" name="textarea">{{d}}</textarea><br>
+        <input type="checkbox" name="chk1">Show all Info
+        <input type="checkbox" name="chk2">Word Count
+        <input type="checkbox" name="chk3">Word Frequency
+        <input type="checkbox" name="chk4">Convert Text into Uppercase
+        <input type="checkbox" name="chk5">Remove Punctuations <br>
+        <input type="checkbox" name="chk6">Count lines
+        <input type="checkbox" name="chk7">Start with
+        <input type="checkbox" name="chk8">Ends with
+        <input type="checkbox" name="chk9">Show word with vowel in it:
+        <input type="checkbox" name="chk10">Show word with no vowel in it: <br>
+        <input type="submit" value="Show Result">
+    </form>
+    <div class="Answer">
+        <p>{{purpose}}:{{info}}</p>
+    </div>
+</div>
+</body>
+</html>

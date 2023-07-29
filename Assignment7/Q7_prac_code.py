@@ -46,14 +46,14 @@
 
 # ---------------------------------------------------------------------------------------
 # Q3.Enter the string from user for ex. Str= oiafd3424(*&&()$)slkdng and remove special char and numbers form str.
-# str = input("Enter the string:")
-# mylist = []
-# for i in str:
-#     if i >= 'a' and i <= 'z' or i >= 'A' and i <= 'Z' or i == " ":
-#         # if ord(i) >= 97 and ord(i) <= 122 or ord(i) >= 65 and ord(i) <= 90:
-#         mylist.append(i)
-# str1 = "".join(mylist)
-# print(str1)
+str = input("Enter the string:")
+mylist = []
+for i in str:
+    if i >= 'a' and i <= 'z' or i >= 'A' and i <= 'Z' or i == " ":
+        # if ord(i) >= 97 and ord(i) <= 122 or ord(i) >= 65 and ord(i) <= 90:
+        mylist.append(i)
+str1 = "".join(mylist)
+print(str1)
 
 # ---------------------------------------------------------------------------------------
 # Q4.Create cube dict from existing list.

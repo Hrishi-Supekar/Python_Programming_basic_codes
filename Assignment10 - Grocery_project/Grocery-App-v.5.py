@@ -57,8 +57,7 @@ def display_price_cart(x):
         for x, y in Grocery_prod_dict.items():
             if i == x:
                 price_cart.update(
-                    {i: j * int(y['Individual_Price'])})  # Used for adding key and individual price x qty in
-                # price_dict
+                    {i: j * int(y['Individual_Price'])})  # Used for adding key and individual price x qty in price_dict
     print(price_cart)
 
 
