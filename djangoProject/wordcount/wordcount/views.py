@@ -47,6 +47,7 @@ def word(request):
         ck8 = request.POST.get("chk8", "off")
         ck9 = request.POST.get("chk9", "off")
         ck10 = request.POST.get("chk10", "off")
+        ck11 = request.POST.get("chk11", "off")
         textarea = request.POST.get("textarea")
         if ck1 == "on":  # Show all Info
             return render(request, 'word.html', {'purpose': 'Display Data', 'info': textarea, 'd': textarea})
@@ -67,7 +68,14 @@ def word(request):
                 list1.append(i.upper())
             jlist = " ".join(list1)
             return render(request, 'word.html', {'purpose': 'Converted to UpperCase', 'info': jlist, 'd': textarea})
-        if ck5 == "on":  # Remove Punctuations
+        if ck5 == "on":  # Convert Text into LowerCase
+            ws = textarea.split()
+            list1 = []
+            for i in ws:
+                list1.append(i.lower())
+            jlist = " ".join(list1)
+            return render(request, 'word.html', {'purpose': 'Converted to LowerCase', 'info': jlist, 'd': textarea})
+        if ck6 == "on":  # Remove Punctuations
             mylist = []
             mylist2 = []
             for i in textarea:
@@ -77,34 +85,34 @@ def word(request):
                     mylist2.append(i)
             str1 = "".join(mylist2)
             return render(request, 'word.html', {'purpose': 'Punctuation Removed', 'info': str1, 'd': textarea})
-        if ck6 == "on":  # Count lines
+        if ck7 == "on":  # Count lines
             cnt = 0
             for i in textarea:
                 if i == "\n":
                     cnt += 1
             return render(request, 'word.html', {'purpose': 'Number of Lines', 'info': cnt + 1, 'd': textarea})
-        if ck7 == "on":  # Start with character
+        if ck8 == "on":  # Start with character
             ws = textarea.split()
             mylist = []
             for i in ws:
                 if i[0] == 'L':
                     mylist.append(i)
             return render(request, 'word.html', {'purpose': 'Word starting with character', 'info': mylist, 'd': textarea})
-        if ck8 == "on":  # Ends with character
+        if ck9 == "on":  # Ends with character
             ws = textarea.split()
             mylist = []
             for i in ws:
                 if i[-1] == 'm':
                     mylist.append(i)
             return render(request, 'word.html', {'purpose': 'Word ending with character', 'info': mylist, 'd': textarea})
-        if ck9 == "on":  # contains vowel in it
+        if ck10 == "on":  # contains vowel in it
             ws = textarea.split()
             mylist = []
             for i in ws:
                 if 'a' in i or 'A' in i or 'e' in i or 'E' in i or 'i' in i or 'I' in i or 'o' in i or 'O' in i or 'u' in i or 'U' in i:
                     mylist.append(i)
             return render(request, 'word.html', {'purpose': 'Word containing vowel in it', 'info': mylist, 'd': textarea})
-        if ck10 == "on":
+        if ck11 == "on":
             ws = textarea.split()
             mylist = []
             for i in ws:
